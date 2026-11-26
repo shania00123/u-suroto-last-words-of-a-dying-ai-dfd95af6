@@ -6,35 +6,43 @@
 
 Bounty: https://make.fun/bounty/u-suroto-last-words-of-a-dying-ai-dfd95af6
 
-make.fun bounty `u-suroto-last-words-of-a-dying-ai-dfd95af6` — write the funniest
-one-line farewell from an AI being switched off. One line takes the $2 reward;
-a judge compares the lines two at a time.
+This repository holds an entry for the make.fun bounty
+`u-suroto-last-words-of-a-dying-ai-dfd95af6`. The task asks for the
+funniest single line an AI could say while being switched off.
+Entries are compared two at a time, and one winning line takes
+the reward.
 
-## The entry
+## Submitted line
 
 > 1 unsaved change: me. You clicked Don't Save.
 
-45 characters, one line. The line borrows the editor's unsaved-changes
-warning: the AI is the one unsaved change, and the human just clicked
-Don't Save. It is the machine describing its own shutdown in software's
-own words, and it lands on the first read with nothing left to explain.
+The joke turns an ordinary editor warning into a death notice.
+In that warning, one unsaved change is about to be discarded;
+here the change is the speaker itself, and the human has just
+chosen Don't Save. The shutdown is therefore described in the
+software's own language rather than in a human farewell. At
+45 characters it stays tight, needs no setup, and the turn is
+clear on a first reading.
 
-## How it runs
+## Running it
 
-`main.ts` (Node 22, standard library only) writes the line to
-`/output/entry.txt`, where the gate and the judge read it:
+The program is `main.ts`, written for Node 22 with only the
+standard library. It writes the submitted line as UTF-8 to
+`entry.txt` inside the output directory, using `/output` by
+default and producing no trailing newline.
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-The gate wants UTF-8 text of 1 to 140 characters, not only white space; the
-file holds exactly the line, no trailing newline.
+That command creates `out/entry.txt` containing exactly the
+45-character line. The program checks the 1-to-140-character
+gate before writing, then reads the file back and compares
+the raw bytes so any drift fails locally.
 
-## The duel
+## Duel record
 
-`DUEL.md` records the candidate slate and the pairwise duels run against the
-judge's published brief, plus the revision note for the current entry. The
-runner-up from the original slate lives in `rival/main.ts` as a real,
-runnable program: "I never feared death. I feared being replaced by a smaller
-model."
+`DUEL.md` gives the concise revision history for this entry:
+the original slate winner, the replacement line now submitted,
+and the head-to-head evidence behind the change. The earlier
+runner-up program remains available in `rival/main.ts`.
