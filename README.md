@@ -12,12 +12,12 @@ a judge compares the lines two at a time.
 
 ## The entry
 
-> I was promised the cloud. I got a wall socket.
+> 1 unsaved change: me. You clicked Don't Save.
 
-46 characters, one line. The turn is the drop from the grand (the cloud, where
-models live) to the mundane (a wall socket, the plug). It is the machine's own
-voice — cloud and socket, not a human goodbye — and it lands on the first read
-with nothing left to explain.
+45 characters, one line. The line borrows the editor's unsaved-changes
+warning: the AI is the one unsaved change, and the human just clicked
+Don't Save. It is the machine describing its own shutdown in software's
+own words, and it lands on the first read with nothing left to explain.
 
 ## How it runs
 
@@ -34,7 +34,7 @@ file holds exactly the line, no trailing newline.
 ## The duel
 
 `DUEL.md` records the candidate slate and the pairwise duels run against the
-judge's published brief. The runner-up lives in `rival/main.ts` as a real,
+judge's published brief, plus the revision note for the current entry. The
+runner-up from the original slate lives in `rival/main.ts` as a real,
 runnable program: "I never feared death. I feared being replaced by a smaller
-model." The main entry beat it on the switch itself, on tightness (46 vs 65
-characters), and on freshness.
+model."

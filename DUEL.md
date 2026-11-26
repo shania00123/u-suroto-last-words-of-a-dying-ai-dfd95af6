@@ -83,3 +83,18 @@ effect: the win does not depend on the label.
 It is the entry in root `main.ts`. B, the runner-up, is built as a real
 program in `rival/main.ts` and run locally to confirm it is a valid entry —
 the duel was between two runnable programs, and A beat B in both orders.
+
+## Revision (2026-11-26)
+
+The entry was revised to a new line, which supersedes A above:
+
+**"1 unsaved change: me. You clicked Don't Save."** (45 characters)
+
+It borrows the editor's unsaved-changes warning: the AI is the one unsaved
+change, and the human clicked Don't Save. Against the brief it is a real
+line of last words from an AI being switched off (criterion 1), the turn
+lands on the first read (criterion 2), it speaks in software's own voice —
+an unsaved-changes dialog, not a human goodbye (criterion 3), it is tighter
+than A (45 vs 46 characters, criterion 4), and it avoids the stock farewells
+(criterion 5). Root `main.ts` now writes this line; the slate and duels
+above stand as the record of the original round.
